@@ -52,6 +52,12 @@
     },
     "bec605": {
       "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "grade": {
+      "type": "string"
     }
   }
 }
