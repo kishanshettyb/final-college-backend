@@ -40,6 +40,15 @@
     },
     "result": {
       "type": "string"
+    },
+    "bec602": {
+      "type": "string"
+    },
+    "bec603": {
+      "type": "string"
+    },
+    "bec604": {
+      "type": "string"
     }
   }
 }
