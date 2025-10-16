@@ -49,6 +49,9 @@
     },
     "bec604": {
       "type": "string"
+    },
+    "bec605": {
+      "type": "string"
     }
   }
 }

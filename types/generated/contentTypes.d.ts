@@ -442,6 +442,10 @@ export interface ApiGooglesheetGooglesheet extends Struct.CollectionTypeSchema {
   };
   attributes: {
     bec601: Schema.Attribute.String;
+    bec602: Schema.Attribute.String;
+    bec603: Schema.Attribute.String;
+    bec604: Schema.Attribute.String;
+    bec605: Schema.Attribute.String;
     category: Schema.Attribute.String;
     CGPA: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
