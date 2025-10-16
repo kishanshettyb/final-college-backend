@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "googlesheets",
+  "info": {
+    "singularName": "googlesheet",
+    "pluralName": "googlesheets",
+    "displayName": "googlesheet"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "usn": {
+      "type": "string"
+    },
+    "sem": {
+      "type": "string"
+    },
+    "SGPA": {
+      "type": "string"
+    },
+    "CGPA": {
+      "type": "string"
+    },
+    "percentage": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "bec601": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string"
+    }
+  }
+}
