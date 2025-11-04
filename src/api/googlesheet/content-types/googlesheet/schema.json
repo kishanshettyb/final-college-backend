@@ -58,6 +58,9 @@
     },
     "grade": {
       "type": "string"
+    },
+    "bec606": {
+      "type": "string"
     }
   }
 }
