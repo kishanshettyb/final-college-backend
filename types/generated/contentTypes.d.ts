@@ -443,10 +443,13 @@ export interface ApiGooglesheetGooglesheet extends Struct.CollectionTypeSchema {
   attributes: {
     bec601: Schema.Attribute.String;
     bec602: Schema.Attribute.String;
-    bec603: Schema.Attribute.String;
-    bec604: Schema.Attribute.String;
-    bec605: Schema.Attribute.String;
-    bec606: Schema.Attribute.String;
+    bec613b: Schema.Attribute.String;
+    bec685: Schema.Attribute.String;
+    becl606: Schema.Attribute.String;
+    becl657d: Schema.Attribute.String;
+    biks609: Schema.Attribute.String;
+    bis654c: Schema.Attribute.String;
+    bnsk685: Schema.Attribute.String;
     branch: Schema.Attribute.String;
     category: Schema.Attribute.String;
     CGPA: Schema.Attribute.String;
