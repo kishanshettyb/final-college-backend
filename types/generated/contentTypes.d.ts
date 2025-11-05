@@ -449,7 +449,7 @@ export interface ApiGooglesheetGooglesheet extends Struct.CollectionTypeSchema {
     becl657d: Schema.Attribute.String;
     biks609: Schema.Attribute.String;
     bis654c: Schema.Attribute.String;
-    bnsk685: Schema.Attribute.String;
+    bnsk658: Schema.Attribute.String;
     branch: Schema.Attribute.String;
     category: Schema.Attribute.String;
     CGPA: Schema.Attribute.String;
