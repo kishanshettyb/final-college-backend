@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "student"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "usn": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "age": {
+      "type": "integer"
+    },
+    "semistermarks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::semistermark.semistermark",
+      "mappedBy": "student"
+    }
+  }
+}

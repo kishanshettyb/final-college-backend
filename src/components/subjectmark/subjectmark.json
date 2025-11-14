@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_subjectmark_subjectmarks",
+  "info": {
+    "displayName": "subjectmark",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "subjects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subject.subject"
+    },
+    "internal_mark": {
+      "type": "integer"
+    },
+    "external_mark": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

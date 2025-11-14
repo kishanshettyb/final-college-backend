@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "singularName": "subject",
+    "pluralName": "subjects",
+    "displayName": "subject"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sub_code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "semister": {
+      "type": "enumeration",
+      "enum": [
+        "sem1",
+        "sem2",
+        "sem3",
+        "sem4",
+        "sem5",
+        "sem6",
+        "sem7",
+        "sem8"
+      ]
+    },
+    "branch": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::branch.branch",
+      "inversedBy": "subjects"
+    }
+  }
+}

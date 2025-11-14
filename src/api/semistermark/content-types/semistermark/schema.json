@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "semistermarks",
+  "info": {
+    "singularName": "semistermark",
+    "pluralName": "semistermarks",
+    "displayName": "semistermark"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "marks": {
+      "type": "component",
+      "component": "subjectmark.mark",
+      "repeatable": true
+    },
+    "semister": {
+      "type": "enumeration",
+      "enum": [
+        "sem1",
+        "sem2",
+        "sem3",
+        "sem4",
+        "sem5",
+        "sem6",
+        "sem7",
+        "sem8"
+      ]
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "semistermarks"
+    }
+  }
+}
