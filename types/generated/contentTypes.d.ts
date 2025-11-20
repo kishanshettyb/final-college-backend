@@ -522,10 +522,15 @@ export interface ApiMarkMark extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    external_mark: Schema.Attribute.Integer;
+    internal_mark: Schema.Attribute.Integer;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::mark.mark'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    semister: Schema.Attribute.String;
+    student: Schema.Attribute.Relation<'oneToOne', 'api::student.student'>;
+    subject: Schema.Attribute.Relation<'oneToOne', 'api::subject.subject'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -10,5 +10,25 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject.subject"
+    },
+    "internal_mark": {
+      "type": "integer"
+    },
+    "external_mark": {
+      "type": "integer"
+    },
+    "semister": {
+      "type": "string"
+    }
+  }
 }
