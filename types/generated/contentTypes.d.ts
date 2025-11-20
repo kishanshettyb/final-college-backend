@@ -508,6 +508,30 @@ export interface ApiGooglesheetGooglesheet extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMarkMark extends Struct.CollectionTypeSchema {
+  collectionName: 'marks';
+  info: {
+    displayName: 'mark';
+    pluralName: 'marks';
+    singularName: 'mark';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::mark.mark'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSemistermarkSemistermark
   extends Struct.CollectionTypeSchema {
   collectionName: 'semistermarks';
@@ -1126,6 +1150,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::branch.branch': ApiBranchBranch;
       'api::googlesheet.googlesheet': ApiGooglesheetGooglesheet;
+      'api::mark.mark': ApiMarkMark;
       'api::semistermark.semistermark': ApiSemistermarkSemistermark;
       'api::student.student': ApiStudentStudent;
       'api::subject.subject': ApiSubjectSubject;
