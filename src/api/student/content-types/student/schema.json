@@ -36,6 +36,11 @@
       "relation": "oneToMany",
       "target": "api::semistermark.semistermark",
       "mappedBy": "student"
+    },
+    "branch": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::branch.branch"
     }
   }
 }
