@@ -28,7 +28,7 @@
       "required": true,
       "unique": true
     },
-    "age": {
+    "dob": {
       "type": "integer"
     },
     "branch": {
@@ -41,6 +41,14 @@
       "relation": "manyToOne",
       "target": "api::result.result",
       "inversedBy": "students"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "SC",
+        "ST",
+        "GENERAL"
+      ]
     }
   }
 }

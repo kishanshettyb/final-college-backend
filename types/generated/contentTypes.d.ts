@@ -619,11 +619,12 @@ export interface ApiStudentStudent extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    age: Schema.Attribute.Integer;
     branch: Schema.Attribute.Relation<'oneToOne', 'api::branch.branch'>;
+    category: Schema.Attribute.Enumeration<['SC', 'ST', 'GENERAL']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    dob: Schema.Attribute.Integer;
     gender: Schema.Attribute.Enumeration<['male', 'female']> &
       Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
