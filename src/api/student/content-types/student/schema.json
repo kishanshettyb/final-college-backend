@@ -28,9 +28,6 @@
       "required": true,
       "unique": true
     },
-    "dob": {
-      "type": "integer"
-    },
     "branch": {
       "type": "relation",
       "relation": "oneToOne",
