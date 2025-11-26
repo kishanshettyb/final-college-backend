@@ -552,6 +552,9 @@ export interface ApiResultResult extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    grade: Schema.Attribute.Enumeration<
+      ['first class', 'first class with distinction', 'pass', 'fail']
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -560,9 +563,7 @@ export interface ApiResultResult extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     percentage: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    result: Schema.Attribute.Enumeration<
-      ['first class', 'first class with distinction', 'pass', 'fail']
-    >;
+    result: Schema.Attribute.Enumeration<['pass', 'fail']>;
     semister: Schema.Attribute.Enumeration<
       ['sem1', 'sem2', 'sem3', 'sem4', 'sem5', 'sem6', 'sem7']
     >;

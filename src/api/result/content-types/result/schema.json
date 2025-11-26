@@ -32,7 +32,7 @@
     "percentage": {
       "type": "string"
     },
-    "result": {
+    "grade": {
       "type": "enumeration",
       "enum": [
         "first class",
@@ -49,6 +49,13 @@
     },
     "SGPA": {
       "type": "string"
+    },
+    "result": {
+      "type": "enumeration",
+      "enum": [
+        "pass",
+        "fail"
+      ]
     }
   }
 }
