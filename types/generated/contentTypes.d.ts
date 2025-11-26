@@ -537,6 +537,44 @@ export interface ApiMarkMark extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiResultResult extends Struct.CollectionTypeSchema {
+  collectionName: 'results';
+  info: {
+    displayName: 'result';
+    pluralName: 'results';
+    singularName: 'result';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    CGPA: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::result.result'
+    > &
+      Schema.Attribute.Private;
+    percentage: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    result: Schema.Attribute.Enumeration<
+      ['first class', 'first class with distinction', 'pass', 'fail']
+    >;
+    semister: Schema.Attribute.Enumeration<
+      ['sem1', 'sem2', 'sem3', 'sem4', 'sem5', 'sem6', 'sem7']
+    >;
+    SGPA: Schema.Attribute.String;
+    students: Schema.Attribute.Relation<'oneToMany', 'api::student.student'>;
+    total: Schema.Attribute.Integer;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSemistermarkSemistermark
   extends Struct.CollectionTypeSchema {
   collectionName: 'semistermarks';
@@ -563,7 +601,6 @@ export interface ApiSemistermarkSemistermark
     semister: Schema.Attribute.Enumeration<
       ['sem1', 'sem2', 'sem3', 'sem4', 'sem5', 'sem6', 'sem7', 'sem8']
     >;
-    student: Schema.Attribute.Relation<'manyToOne', 'api::student.student'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -596,10 +633,7 @@ export interface ApiStudentStudent extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    semistermarks: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::semistermark.semistermark'
-    >;
+    result: Schema.Attribute.Relation<'manyToOne', 'api::result.result'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1156,6 +1190,7 @@ declare module '@strapi/strapi' {
       'api::branch.branch': ApiBranchBranch;
       'api::googlesheet.googlesheet': ApiGooglesheetGooglesheet;
       'api::mark.mark': ApiMarkMark;
+      'api::result.result': ApiResultResult;
       'api::semistermark.semistermark': ApiSemistermarkSemistermark;
       'api::student.student': ApiStudentStudent;
       'api::subject.subject': ApiSubjectSubject;

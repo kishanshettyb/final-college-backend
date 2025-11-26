@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "results",
+  "info": {
+    "singularName": "result",
+    "pluralName": "results",
+    "displayName": "result"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student.student",
+      "mappedBy": "result"
+    },
+    "semister": {
+      "type": "enumeration",
+      "enum": [
+        "sem1",
+        "sem2",
+        "sem3",
+        "sem4",
+        "sem5",
+        "sem6",
+        "sem7"
+      ]
+    },
+    "percentage": {
+      "type": "string"
+    },
+    "result": {
+      "type": "enumeration",
+      "enum": [
+        "first class",
+        "first class with distinction",
+        "pass",
+        "fail"
+      ]
+    },
+    "total": {
+      "type": "integer"
+    },
+    "CGPA": {
+      "type": "string"
+    },
+    "SGPA": {
+      "type": "string"
+    }
+  }
+}

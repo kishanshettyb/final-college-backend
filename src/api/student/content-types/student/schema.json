@@ -31,16 +31,16 @@
     "age": {
       "type": "integer"
     },
-    "semistermarks": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::semistermark.semistermark",
-      "mappedBy": "student"
-    },
     "branch": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::branch.branch"
+    },
+    "result": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::result.result",
+      "inversedBy": "students"
     }
   }
 }

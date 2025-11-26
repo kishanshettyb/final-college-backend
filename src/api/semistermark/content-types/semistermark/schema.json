@@ -28,12 +28,6 @@
         "sem7",
         "sem8"
       ]
-    },
-    "student": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::student.student",
-      "inversedBy": "semistermarks"
     }
   }
 }
