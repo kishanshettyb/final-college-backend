@@ -14,7 +14,7 @@
     "sub_code": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "semister": {
       "type": "enumeration",
