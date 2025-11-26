@@ -39,13 +39,11 @@
       "target": "api::result.result",
       "inversedBy": "students"
     },
+    "dob": {
+      "type": "string"
+    },
     "category": {
-      "type": "enumeration",
-      "enum": [
-        "SC",
-        "ST",
-        "GENERAL"
-      ]
+      "type": "string"
     }
   }
 }
