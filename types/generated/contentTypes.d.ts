@@ -619,6 +619,20 @@ export interface ApiStudentStudent extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    batch: Schema.Attribute.Enumeration<
+      [
+        'Batch-2020-21',
+        'Batch-2021-22',
+        'Batch-2022-23',
+        'Batch-2023-24',
+        'Batch-2024-25',
+        'Batch-2025-26',
+        'Batch-2026-27',
+        'Batch-2027-28',
+        'Batch-2028-29',
+        'Batch-2029-30',
+      ]
+    >;
     branch: Schema.Attribute.Relation<'oneToOne', 'api::branch.branch'>;
     category: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;

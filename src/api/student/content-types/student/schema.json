@@ -44,6 +44,21 @@
     },
     "category": {
       "type": "string"
+    },
+    "batch": {
+      "type": "enumeration",
+      "enum": [
+        "Batch-2020-21",
+        "Batch-2021-22",
+        "Batch-2022-23",
+        "Batch-2023-24",
+        "Batch-2024-25",
+        "Batch-2025-26",
+        "Batch-2026-27",
+        "Batch-2027-28",
+        "Batch-2028-29",
+        "Batch-2029-30"
+      ]
     }
   }
 }
