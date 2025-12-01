@@ -563,12 +563,12 @@ export interface ApiResultResult extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     percentage: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    result: Schema.Attribute.Enumeration<['pass', 'fail']>;
+    resultstatus: Schema.Attribute.Enumeration<['pass', 'fail']>;
     semister: Schema.Attribute.Enumeration<
       ['sem1', 'sem2', 'sem3', 'sem4', 'sem5', 'sem6', 'sem7']
     >;
     SGPA: Schema.Attribute.String;
-    students: Schema.Attribute.Relation<'oneToMany', 'api::student.student'>;
+    student: Schema.Attribute.Relation<'manyToOne', 'api::student.student'>;
     total: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -649,7 +649,7 @@ export interface ApiStudentStudent extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    result: Schema.Attribute.Relation<'manyToOne', 'api::result.result'>;
+    results: Schema.Attribute.Relation<'oneToMany', 'api::result.result'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

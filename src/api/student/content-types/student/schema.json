@@ -1,64 +1,62 @@
 {
-  "kind": "collectionType",
-  "collectionName": "students",
-  "info": {
-    "singularName": "student",
-    "pluralName": "students",
-    "displayName": "student"
-  },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {},
-  "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "gender": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "male",
-        "female"
-      ]
-    },
-    "usn": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "branch": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::branch.branch"
-    },
-    "result": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::result.result",
-      "inversedBy": "students"
-    },
-    "dob": {
-      "type": "string"
-    },
-    "category": {
-      "type": "string"
-    },
-    "batch": {
-      "type": "enumeration",
-      "enum": [
-        "Batch-2020-21",
-        "Batch-2021-22",
-        "Batch-2022-23",
-        "Batch-2023-24",
-        "Batch-2024-25",
-        "Batch-2025-26",
-        "Batch-2026-27",
-        "Batch-2027-28",
-        "Batch-2028-29",
-        "Batch-2029-30"
-      ]
-    }
-  }
+	"kind": "collectionType",
+	"collectionName": "students",
+	"info": {
+		"singularName": "student",
+		"pluralName": "students",
+		"displayName": "student"
+	},
+	"options": {
+		"draftAndPublish": true
+	},
+	"pluginOptions": {},
+	"attributes": {
+		"name": {
+			"type": "string",
+			"required": true
+		},
+		"gender": {
+			"type": "enumeration",
+			"required": true,
+			"enum": ["male", "female"]
+		},
+		"usn": {
+			"type": "string",
+			"required": true,
+			"unique": true
+		},
+		"branch": {
+			"type": "relation",
+			"relation": "oneToOne",
+			"target": "api::branch.branch"
+		},
+
+		"dob": {
+			"type": "string"
+		},
+		"category": {
+			"type": "string"
+		},
+		"batch": {
+			"type": "enumeration",
+			"enum": [
+				"Batch-2020-21",
+				"Batch-2021-22",
+				"Batch-2022-23",
+				"Batch-2023-24",
+				"Batch-2024-25",
+				"Batch-2025-26",
+				"Batch-2026-27",
+				"Batch-2027-28",
+				"Batch-2028-29",
+				"Batch-2029-30"
+			]
+		},
+		"results": {
+			"type": "relation",
+			"relation": "oneToMany",
+			"target": "api::result.result",
+			"mappedBy": "student"
+		}
+	}
 }
